@@ -17,7 +17,7 @@ const paths = {
 }
 
 // Tasks
-gulp.task('default', () => {
+gulp.task('default', ['inject','styles'], () => {
   browserSync.init({
     server: {
       baseDir: 'src',
