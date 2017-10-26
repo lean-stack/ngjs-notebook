@@ -1,8 +1,12 @@
-// Main app module
-angular.module('app', [])
-  .run(appStart);
+(function(){
 
-appStart.$inject = ['$log'];
-function appStart($log) {
-  $log.info('App started at ' + new Date());
-}
+  // Main app module
+  angular.module('app', [])
+    .run(appStart);
+
+  appStart.$inject = ['$log'];
+  function appStart($log) {
+    $log.info('App started at ' + new Date());
+  }
+
+})();
