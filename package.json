@@ -19,7 +19,9 @@
   "homepage": "https://github.com/lean-stack/ngjs-notebook#readme",
   "devDependencies": {
     "browser-sync": "^2.18.13",
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "gulp-angular-filesort": "^1.1.1",
+    "gulp-inject": "^4.3.0"
   },
   "dependencies": {
     "angular": "^1.6.6"
