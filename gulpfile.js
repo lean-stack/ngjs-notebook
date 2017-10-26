@@ -7,6 +7,7 @@ const ngSort = require('gulp-angular-filesort');
 
 // Node packages
 const browserSync = require('browser-sync').create();
+const log         = require('connect-logger');
 
 // Config
 const paths = {
@@ -20,7 +21,10 @@ gulp.task('default', () => {
       baseDir: 'src',
       routes: {
         '/node_modules': 'node_modules'
-      }
+      },
+      middleware: [
+        log({ format: '%date %status %method %url' })
+      ]
     }
   });
 
