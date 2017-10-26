@@ -32,6 +32,7 @@ gulp.task('default', () => {
 
   gulp.watch('src/**/*.html').on('change', browserSync.reload);
   gulp.watch(paths.scripts, ['inject']);
+  gulp.watch(paths.styles, ['styles']);
 });
 
 gulp.task('inject', () => {
@@ -44,5 +45,6 @@ gulp.task('inject', () => {
 gulp.task('styles', () => {
   gulp.src('src/styles/app.scss')
     .pipe(sass())
-    .pipe(gulp.dest('src/styles'));
+    .pipe(gulp.dest('src/styles'))
+    .pipe(browserSync.stream());
 });
