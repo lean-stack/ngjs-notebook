@@ -1,7 +1,7 @@
 (function(){
 
   // Main app module
-  angular.module('app', [])
+  angular.module('app', ['nbTodos'])
     .run(appStart);
 
   appStart.$inject = ['$log'];
