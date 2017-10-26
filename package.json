@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/lean-stack/ngjs-notebook/issues"
   },
-  "homepage": "https://github.com/lean-stack/ngjs-notebook#readme"
+  "homepage": "https://github.com/lean-stack/ngjs-notebook#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1"
+  }
 }
