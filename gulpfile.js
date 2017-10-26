@@ -10,4 +10,6 @@ gulp.task('default', () => {
       baseDir: "src"
     }
   });
+
+  gulp.watch("src/**/*.html").on('change', browserSync.reload);
 });
