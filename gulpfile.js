@@ -4,6 +4,7 @@ const gulp = require('gulp');
 // Gulp plugins
 const inject = require('gulp-inject');
 const ngSort = require('gulp-angular-filesort');
+const sass   = require('gulp-sass');
 
 // Node packages
 const browserSync = require('browser-sync').create();
@@ -11,7 +12,8 @@ const log         = require('connect-logger');
 
 // Config
 const paths = {
-  scripts: 'src/**/*.js'
+  scripts: 'src/**/*.js',
+  styles:  'src/**/*.scss'
 }
 
 // Tasks
@@ -37,4 +39,10 @@ gulp.task('inject', () => {
   gulp.src('src/index.html')
     .pipe(inject(scripts, {relative: true}))
     .pipe(gulp.dest('src'));
+});
+
+gulp.task('styles', () => {
+  gulp.src('src/styles/app.scss')
+    .pipe(sass())
+    .pipe(gulp.dest('src/styles'));
 });
