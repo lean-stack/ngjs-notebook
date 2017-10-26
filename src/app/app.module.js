@@ -4,5 +4,5 @@ angular.module('app', [])
 
 appStart.$inject = ['$log'];
 function appStart($log) {
-  $log.info('App started ...');
+  $log.info('App started at ' + new Date());
 }

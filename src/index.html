@@ -8,7 +8,8 @@
   <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
 </head>
 <body ng-app="app" ng-strict-di>
-  <h1>Developers Notebook</h1>
+
+  <app-shell></app-shell>
 
   <!-- vendors -->
   <script src="../node_modules/jquery/dist/jquery.slim.js"></script>
@@ -19,6 +20,8 @@
 
   <!-- inject:js -->
   <script src="app/app.module.js"></script>
+  <script src="app/shell/nav/nav.component.js"></script>
+  <script src="app/shell/shell.component.js"></script>
   <!-- endinject -->
 </body>
 </html>
