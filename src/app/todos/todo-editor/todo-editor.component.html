@@ -1,6 +1,10 @@
-<form ng-submit="vm.create()">
-    <div class="form-group">
+<form ng-submit="vm.create()" novalidate name="form">
+    <div class="form-group" ng-class="{ 'has-error': vm.error }">
       <label for="newTodo">New Todo</label>
-      <input type="text" ng-model="vm.text" class="form-control" id="newTodo" placeholder="What need's to be done?">
+      <input type="text" name="newTodo" required ng-model="vm.text" class="form-control" id="newTodo" placeholder="What need's to be done?">
+      <div ng-show="vm.error" class="help-block">
+          Nothing to do?
+      </div>
+    
     </div>
 </form>

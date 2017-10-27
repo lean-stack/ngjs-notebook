@@ -18,6 +18,9 @@
             url: '/links',
             component: 'nbLinks',
             resolve: {
+                authenticated: ['auth', function(auth) {
+                     return auth.isAuthenticated();
+                }],
                 categories: ['linksStore', function(linksStore) { return linksStore.getAllCategories(); }]
             }
           };

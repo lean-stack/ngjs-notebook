@@ -11,6 +11,10 @@
   function TodoEditorController(todosStore) {
     this.text = '';
     this.create = function () {
+      if( this.text.trim().length === 0) {
+        this.error = true;
+        return;
+      }
       todosStore.create(this.text);
       this.text = '';
     }
