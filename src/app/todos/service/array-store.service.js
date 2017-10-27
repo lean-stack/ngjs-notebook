@@ -3,18 +3,16 @@
   angular.module('nbTodos')
     .factory('todosStore', storeFactory);
 
-  storeFactory.$inject = ['$rootScope'];
-  function storeFactory($rootScope) {
-    var store = new ArrayStore($rootScope);
+  function storeFactory() {
+    var store = new ArrayStore();
     store.create('Unit testing');
     return store;
   }
 
-  function ArrayStore(scope) {
+  function ArrayStore() {
 
     this.todos = [];
     this.maxId = 0;
-    this.scope = scope;
 
   }
 
@@ -24,7 +22,6 @@
 
     return new Promise(function(resolve, reject) {
       resolve(store.todos);
-      store.scope.$digest();
     })
   };
 
@@ -41,7 +38,6 @@
         done: false
       };
       store.todos.push(todo);
-      store.scope.$digest();
       resolve(todo);
     });
   }
