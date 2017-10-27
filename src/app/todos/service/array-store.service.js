@@ -5,7 +5,7 @@
 
   function storeFactory() {
     var store = new ArrayStore();
-    store.create('Unit testing');
+    // store.create('Unit testing');
     return store;
   }
 
@@ -34,7 +34,7 @@
 
       var todo = {
         id: ++store.maxId,
-        txt: txt,
+        text: txt,
         done: false
       };
       store.todos.push(todo);
