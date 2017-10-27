@@ -1,4 +1,7 @@
 <div class="list-group-item">
     <input type="checkbox" ng-model="vm.todo.done" ng-click="vm.toggleState()">
-    {{ vm.todo.txt }}
+    {{ vm.todo.text }}
+    <button type="button" ng-click="vm.remove()" class="btn btn-default pull-right">
+        <span class="glyphicon glyphicon-remove"></span>
+    </button>
 </div>

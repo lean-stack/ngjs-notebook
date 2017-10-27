@@ -15,6 +15,9 @@
     this.toggleState = function() {
       todosStore.update(this.todo);
     }
+    this.remove = function() {
+      todosStore.delete(this.todo);
+    }
   }
 
 })();

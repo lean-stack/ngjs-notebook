@@ -1,7 +1,7 @@
 (function(){
 
   angular.module('nbTodos')
-    .factory('todosStore', storeFactory);
+    .factory('todosArrayStore', storeFactory);
 
   function storeFactory() {
     var store = new ArrayStore();

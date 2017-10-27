@@ -7,15 +7,15 @@
       controllerAs: 'vm'
   });
 
-  TodoListController.$inject = ['todosStore'];
-  function TodoListController(todosStore) {
+  TodoListController.$inject = ['todosStore', '$scope'];
+  function TodoListController(todosStore, $scope) {
 
     var ctrl = this;
-    ctrl.todos = [{}];
+    ctrl.todos = [];
 
     // Initialize
     todosStore.getAll().then(function(todos){
-      ctrl.todos = todos;
+      $scope.$apply(ctrl.todos = todos);
     });
   }
 })();
