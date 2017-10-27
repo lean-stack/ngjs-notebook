@@ -1,10 +1,2 @@
 
-@import '../../node_modules/bootstrap/scss/bootstrap.scss';
-
-// See: https://gir.me.uk/posts/bootstrap-4-page-header.html
-.page-header {
-  @extend .mb-4;
-  @extend .mt-5;
-  @extend .pb-2;
-  border-bottom: 1px solid $gray-200;
-}
+@import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
