@@ -7,7 +7,7 @@
 
   appStart.$inject = ['$log'];
   function appStart($log) {
-    $log.info('App started at ' + new Date());
+    $log.info('App started, ' + new Date());
   }
   configureTodos.$inject = ['todosResourceUrl'];
   function configureTodos(todosResourceUrl) {
