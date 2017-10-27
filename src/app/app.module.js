@@ -1,8 +1,9 @@
 (function(){
 
   // Main app module
-  angular.module('app', ['nbTodos'])
+  angular.module('app', ['nbTodos','nbLinks','ui.router'])
     .config(configureTodos)
+    .config(routing)
     .run(appStart);
 
   appStart.$inject = ['$log'];
@@ -14,4 +15,17 @@
       todosResourceUrl.uri = 'http://localhost:4000/api/todos';
   }
 
+  routing.$inject = ['$stateProvider', '$urlServiceProvider'];
+  function routing($stateProvider, $urlServiceProvider) {
+    var homeState = {
+      name: 'home',
+      url: '/',
+      component: 'appHome'
+    };
+  
+
+    $stateProvider.state(homeState);
+   
+    $urlServiceProvider.rules.otherwise('/')
+  }
 })();

@@ -1,8 +1,13 @@
 (function(){
     
-    angular.module('app')
+    angular.module('nbLinks')
     .component('nbLinks', {
-        templateUrl: '/app/links/links.component.html'
+        templateUrl: '/app/links/links.component.html',
+        controllerAs: 'vm',
+        bindings: {
+            categories: "<"
+        }
     });
+
 
 })();
