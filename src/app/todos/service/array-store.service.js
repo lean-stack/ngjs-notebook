@@ -41,4 +41,9 @@
       resolve(todo);
     });
   }
+
+  ArrayStore.prototype.update = function(todo) {
+    // noop
+  }
+
 })();
